@@ -20,11 +20,11 @@ Install the `requests` library.
 
 Auto-archive all assets in a shared album (e.g. `Archive Later`).
 
-    python archive.py -h
+    python3 archive.py -h
 
 Trash all assets in a shared album (e.g. `Trash Later`).
 
-    python trash.py -h
+    python3 trash.py -h
 
 Add recently uploaded photos to an album for review (e.g. `Review Later` album).
 
