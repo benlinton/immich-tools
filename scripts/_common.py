@@ -2,7 +2,9 @@
 
 import argparse
 import json
+import os
 import requests
+import sys
 import time
 
 def log(message, condition):
@@ -10,8 +12,17 @@ def log(message, condition):
         print(message)
     
 def load_config_data():
-    with open('config.json', 'r') as file:
-        return json.load(file)
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    config_path = os.path.join(script_dir, 'config.json')
+    try:
+        with open(config_path, 'r') as file:
+            return json.load(file)
+    except FileNotFoundError:
+        log(f"Error: The config file was not found at {config_path}.", True)
+        sys.exit(1)
+    except json.JSONDecodeError:
+        log("Error: The config file contains invalid JSON.", True)
+        sys.exit(1)
 
 def get_headers(api_key):
     return {
