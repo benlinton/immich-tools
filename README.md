@@ -34,3 +34,5 @@ Add recently uploaded photos to an album for review (e.g. `Review Later` album).
 ## Beautify with cover photos
 
 Upload the provided [cover photos](images/) to Immich for each album.
+
+The scripts will not touch any files that contain `(Album_Cover)` in their filename.
