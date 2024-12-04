@@ -12,20 +12,20 @@ from _common import log, load_config_data, get_headers, find_api_key, get_album,
 
 def load_arguments():
     parser = argparse.ArgumentParser(
-        description="Add recently uploaded assets to a given album (e.g. Review Later)."
+        description="Add recently uploaded assets to target album (e.g. Review Later)."
     )
     parser.add_argument(
         'album_name', type=str, 
-        help="Name of the target album."
+        help="name of the target album"
     )
     parser.add_argument(
         'created_after_date', type=str, 
-        help="Fetch assets uploaded after this date (i.e. 2024-04-28 or 2024-04-28T10:03:52.000Z)."
+        help="fetch assets uploaded after date (i.e. 2024-04-28 or 2024-04-28T10:03:52.000Z)"
     )
     parser.add_argument(
         '--verbose', 
         action='store_true', 
-        help="Enable verbose mode."
+        help="enable verbose mode"
     )
     return parser.parse_args()
 

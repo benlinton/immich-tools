@@ -12,16 +12,16 @@ from _common import log, load_config_data, get_headers, find_api_key, get_album,
 
 def load_arguments():
     parser = argparse.ArgumentParser(
-        description="Trash assets found in a target album (e.g. Trash Later)."
+        description='Trash assets found in target album (e.g. "Trash Later").'
     )
     parser.add_argument(
         'album_name', type=str, 
-        help="Name of the target album."
+        help='name of the target album'
     )
     parser.add_argument(
         '--verbose', 
         action='store_true', 
-        help="Enable verbose mode."
+        help='enable verbose mode'
     )
     return parser.parse_args()
 

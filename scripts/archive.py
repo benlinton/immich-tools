@@ -12,21 +12,26 @@ from _common import log, load_config_data, get_headers, find_api_key, get_album,
 
 def load_arguments():
     parser = argparse.ArgumentParser(
-         description="Archive assets found in a target album (e.g. Archive Later)."
+         description='Archive assets found in target album (e.g. "Archive Later").'
     )
     parser.add_argument(
         'album_name', type=str, 
-        help="Name of the target album."
+        help='name of the target album'
+    )
+    parser.add_argument(
+        '--allow-single-album', 
+        action='store_true', 
+        help='archive assets that are only in the target album (default: skip unless in multiple albums)'
     )
     parser.add_argument(
         '--cleanup', 
         action='store_true', 
-        help="Remove assets from album after archiving."
+        help='remove assets from album after archiving'
     )
     parser.add_argument(
         '--verbose', 
         action='store_true', 
-        help="Enable verbose mode."
+        help='enable verbose mode'
     )
     return parser.parse_args()
 
@@ -44,7 +49,7 @@ def main():
     url = config['url']
     users = config['users']
     album_name = args.album_name
-    allow_single_album = False
+    allow_single_album = args.allow_single_album
     cleanup = args.cleanup
     keep_album_cover = True
     verbose = args.verbose
