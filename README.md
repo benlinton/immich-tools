@@ -1,8 +1,12 @@
 # Immich Tools
 
-These tools help resolve limitations of Immich while managing multiple users with **partner mode** enabled.  
+These tools help resolve limitations of Immich when **partner mode** is enabled (for multiple users).
 
-They allow you to trash, archive, and review recent uploads by utilizing shared albums and then running these scripts via `cron`.
+- `archive.py` - users can archive each other's photos
+- `trash.py` - users can trash each other's photos
+- `add_recent.py` - capture recently uploaded photos for easy review
+
+Simply create **shared albums** and then run these scripts manually or via `cron` (recommended).
 
 
 ## Setup
@@ -18,19 +22,17 @@ Install the `requests` library.
 
 ## Run the commands
 
-    cd scripts
-
 Auto-archive all assets in a shared album (e.g. `Archive Later`).
 
-    python3 archive.py -h
+    python3 ./scripts/archive.py --help
 
 Trash all assets in a shared album (e.g. `Trash Later`).
 
-    python3 trash.py -h
+    python3 ./scripts/trash.py --help
 
 Add recently uploaded photos to an album for review (e.g. `Review Later` album).
 
-    python3 add_recent.py -h
+    python3 ./scripts/add_recent.py --help
 
 
 ## Beautify with cover photos
