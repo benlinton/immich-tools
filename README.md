@@ -29,3 +29,8 @@ Trash all assets in a shared album (e.g. `Trash Later`).
 Add recently uploaded photos to an album for review (e.g. `Review Later` album).
 
     python3 add_recent.py -h
+
+
+## Beautify with cover photos
+
+Upload the provided [cover photos](images/) to Immich for each album.
