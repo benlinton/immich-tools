@@ -7,7 +7,7 @@ These tools help resolve limitations of Immich while managing multiple users wit
 
 Copy the example config and edit it.
 
-    cp config.json.example script/config.json
+    cp config.json.example scripts/config.json
 
 Install the `requests` library.
 
