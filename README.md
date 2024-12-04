@@ -1,6 +1,8 @@
 # Immich Tools
 
-These tools help resolve limitations of Immich while managing multiple users with partner mode.  They allow you to trash, archive, and review recent uploads by utilizing shared albums and then running these scripts via `cron`.
+These tools help resolve limitations of Immich while managing multiple users with **partner mode** enabled.  
+
+They allow you to trash, archive, and review recent uploads by utilizing shared albums and then running these scripts via `cron`.
 
 
 ## Setup
